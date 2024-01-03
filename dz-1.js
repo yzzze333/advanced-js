@@ -8,8 +8,8 @@ let data = [
 const ids = new Set(data.map(x => x.id));
 const o = [];
 for (const id of ids) {
-    const name = data.find(x => x.id === id).name
-    o.push({id,name})
+    const name = data.find(x => x.id === id).name;
+    o.push({id,name});
 };
 
 console.log(o)
