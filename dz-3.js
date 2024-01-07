@@ -1,10 +1,15 @@
-const date = '2022-01-01';
+const date = '2009-01-08';
 
 function checkAge(bornTime) {
     const bornDate = new Date(bornTime);
-    if (((new Date().getFullYear()) - bornDate.getFullYear()) > 14) {
-        return true
-    }
+    const nowDate = new Date();
+    if (((nowDate.getFullYear()) - bornDate.getFullYear()) > 14) {
+        if (bornDate.getMonth() <= nowDate.getMonth()) {
+            if (bornDate.getDate() <= nowDate.getDate()){
+                return true
+            };
+        };
+    };
     return false
 };
 
